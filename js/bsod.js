@@ -27,7 +27,13 @@
         showBSOD();
     }
 
+    // The easiest way to mess with someones console,
+    // is to constantly smash the logs.
     function messWithConsole() {
+        // setInterval()
+    }
+
+    function addLog() {
 
     }
 
