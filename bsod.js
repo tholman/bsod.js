@@ -106,9 +106,11 @@
             'position': 'absolute',
             'left': '50%',
             'top': '50%',
-            'transform': 'translateX(-50%) translateY(-50%)',
             'font-size': '14px',
-            'max-width': '420px'
+            'max-width': '420px',
+            'transform': 'translateX(-50%) translateY(-50%)',
+            'mozTransform': 'translateX(-50%) translateY(-50%)',
+            'webkitTransform': 'translateX(-50%) translateY(-50%)',
         }
 
         var error = document.createElement('div');
