@@ -10,6 +10,8 @@
     /**
      * Utils
      */
+
+    // Applies css `properties` to an element.
     function applyProperties( target, properties ) {
       for( var key in properties ) {
         target.style[ key ] = properties[ key ];
@@ -39,8 +41,11 @@
     }
 
     /**
-     * BSON
+     * BSOD
      */
+
+    var isActive = false;
+    var errorRotation = 0;
 
     function init() {
         window.addEventListener('error', onError, false);
@@ -52,24 +57,33 @@
         event.preventDefault();
         event.stopPropagation();
 
-        // Lol, forget the dom
-        wipeDom();
+        if( isActive === false ) {
+            // Lol, forget the dom.
+            wipeDom();
 
-        // Lol, the console is dumb
-        messWithConsole();
+            // Lol, the console is dumb.
+            messWithConsole();
 
-        // Lol, blue screen!
-        showBSOD();
+            // Lol, blue screen!
+            showBSOD();
+
+            isActive = true;
+        }
     }
 
     // The easiest way to mess with someones console,
     // is to constantly smash the logs.
+    // If there's a better way, that just wipes it, let me know!
     function messWithConsole() {
-        // setInterval()
+        setInterval( addLog, 10 );
     }
 
     function addLog() {
-
+        console.log( 'bsod'[errorRotation] );
+        errorRotation++;
+        if( errorRotation > 3) {
+            errorRotation = 0;
+        }
     }
 
     function wipeDom() {
@@ -155,14 +169,10 @@
         mainContent.innerHTML = "A problem has been detected with your JavaScript, and this tab has been shut down to prevent damage to your computer.<br><br>If this is the first time you're seeing this error, restart your computer.<br><br>If problems continue, press ctrl + z on the files you're working on, until it resolves itself.";
         error.appendChild( mainContent );
         
-
-
-
         body.appendChild(bsodContainer);
     }
 
     init();
-
 })()
 
 // error
