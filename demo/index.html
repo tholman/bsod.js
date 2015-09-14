@@ -1,20 +1,91 @@
 <!doctype html>
 <html>
     <head>
-        <title> bsod.js </title>
-        <!-- <link href='./css/styles.css' rel='stylesheet'> -->
+        <title> Blue Screen of Death - BSOD.js </title>
+        <script src='../bsod.js'></script>
+
+        <link href='https://fonts.googleapis.com/css?family=Paytone+One' rel='stylesheet' type='text/css'>
+        <style>
+            
+            html,
+            body {
+                margin: 0px;
+                padding: 0px;
+                -webkit-font-smoothing: antialiased;
+            }
+
+            h1 {
+                font-family: 'Paytone One', sans-serif;
+                font-weight: bold;
+                text-transform: uppercase;
+                margin-top: 0px;
+                color: #111;
+            }
+
+            .content {
+                box-sizing: border-box;
+                padding-top: 40px;
+                padding-left: 40px;
+                max-width: 600px;
+            }
+
+            p,
+            ul {
+                font-family: monospace;
+                font-size: 16px;
+            }
+
+            ul {
+                padding-bottom: 5px;
+            }
+
+            li {
+                margin-top: 15px;
+            }
+
+            button {
+                display: block;
+                margin-top: 15px;
+                font-family: monospace;
+                text-transform: uppercase;
+                padding-left: 15px;
+                padding-right: 15px;
+                border: 2px solid #f5f5f5;
+                border-radius: 6px;
+                min-width: 22px;
+                letter-spacing: 1px;
+                background: black;
+                color: #f5f5f5;
+                box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 1);
+                font-size: inherit;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                cursor: pointer;
+                outline: 0px;
+            }
+        </style>
     </head>
     <body>
-        <p> Dom stuff fun yes. </p>
-        <div>
+
+        <div class="content">
+            <h1>Blue Screen of Death - BSOD.js</h1>
             <p>
-                What?AS?SD?A?D
+                Wowee, web dev tools have been getting great these past few years, its never been easier to find problems, and debug JavaScript. BSOD.js is a throwback to the days of old.
             </p>
-            <div class="subthing">
-                <h1>Why?</h1>
-            </div>
-            <button onclick="error">Cause Error</button>
+            <p>  
+                Turn up your dev game to 11, and enter development hard mode by including bsod.js to your next project. This will cause a few things to happen.
+            </p>
+            <ul>
+                <li>Any js error will trigger the blue screen of death, instantly wiping the dom.</li>
+                <li>You'll see the annoying blue screen, complete with useless error message.</li>
+                <li>bsod.js will spam your console, making it tricky to see what actually caused the error!</li>
+            </ul>
+            <p>
+                Give it a go!
+                <button onclick="error">Cause an error</button>
+            </p>
         </div>
-        <script src='../bsod.js'></script>
+
+
     </body>
 </html>
