@@ -59,7 +59,7 @@
 
         if( isActive === false ) {
             // Lol, forget the dom.
-            wipeDom();
+            wipeDomAndHead();
 
             // Lol, the console is dumb.
             messWithConsole();
@@ -86,8 +86,10 @@
         }
     }
 
-    function wipeDom() {
+    function wipeDomAndHead() {
         document.body.innerHTML = '';
+        document.getElementsByTagName("head")[0].innerHTML = "";
+        document.title = "Blue Screen of Death"
     }
 
     function showBSOD() {
