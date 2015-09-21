@@ -1,6 +1,6 @@
 ##Blue Screen of Death - BSOD.js
 
-Wowee, web dev tools have been getting great these past few years, its never been easier to find, and debug probems online. The blue screen of death is a throwback to the days of old.
+Wowee, web dev tools have been getting great these past few years, its never been easier to find, and debug probems online. The blue screen of death is a throwback to the days of old. You can "play" with it [here](http://tholman.com/blue-screen-of-death/).
 
 Turn up your dev game to 11, and enter development hard mode by including `bsod.js` to your next project. This will cause a few things to happen.
 
