@@ -2,6 +2,7 @@
 <html>
     <head>
         <title> Blue Screen of Death - BSOD.js </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src='../bsod.js'></script>
 
         <link href='https://fonts.googleapis.com/css?family=Paytone+One' rel='stylesheet' type='text/css'>
@@ -70,10 +71,24 @@
                 right: 0;
                 border: 0;
             }
+
+            .info {
+                font-weight: bold;
+                margin-top: 24px;
+                line-height: 26px;
+            }
+
+            .info a {
+                color: #444;
+            }
+
+            .info iframe {
+                margin-bottom: -4px;
+            }
         </style>
     </head>
     <body>
-    
+
         <div class="content">
             <h1>Blue Screen of Death - BSOD.js</h1>
             <p>
@@ -91,11 +106,19 @@
                 Give it a go!
                 <button onclick="error">Click to cause an error</button>
             </p>
+            <p class="info">
+                Built by <a href="http://twitter.com/twholman">Tim Holman</a> &bull;
+                <a href="https://github.com/tholman/bsod.js">Source & Instructions</a> &bull;
+                <a href="https://twitter.com/share" class="twitter-share-button" data-text="Blue screen of death in javascript - because debugging on the web is a little too easy -" data-via="twholman">Tweet</a>
+            </p>
         </div>
 
         <a class="github-link" href="https://github.com/tholman/bsod.js" target="_blank">
             <img src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
         </a>
+
+        <!-- Tweet Button -->
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
     </body>
 </html>
