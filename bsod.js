@@ -88,7 +88,7 @@
 
     function clearConsole () {
         // Most modern browsers support this
-        if (typeof console.clear === 'function') {
+        if (window.console && typeof console.clear === 'function') {
             console.clear();
         // This seems to be supported by older versions of browsers
         } else if (typeof clear === 'function') {
