@@ -72,9 +72,9 @@
     }
 
     // The easiest way to mess with someones console,
-    // is to constantly smash the logs.
-    // If there's a better way, that just wipes it, let me know!
+    // is to delete what's logged and constantly smash the logs.
     function messWithConsole() {
+        clearConsole();
         setInterval( addLog, 10 );
     }
 
@@ -83,6 +83,16 @@
         errorRotation++;
         if( errorRotation > 3) {
             errorRotation = 0;
+        }
+    }
+
+    function clearConsole () {
+        // Most modern browsers support this
+        if (window.console && typeof console.clear === 'function') {
+            console.clear();
+        // This seems to be supported by older versions of browsers
+        } else if (typeof clear === 'function') {
+            clear();
         }
     }
 
@@ -99,7 +109,7 @@
         /**
          * Main Container
          */
-        
+
         var bgStyles = {
             'font-family': "'Lucida Console', 'Lucida Sans Typewriter', monaco, 'Bitstream Vera Sans Mono', monospace",
             'background': '#0000AA',
@@ -166,11 +176,11 @@
          */
 
         var mainContent = document.createElement('div');
-        
+
         // Yeah, its pretty strange that its on one line. Oh well.
         mainContent.innerHTML = "A problem has been detected with your JavaScript, and this tab has been shut down to prevent damage to your computer.<br><br>If this is the first time you're seeing this error, restart your computer.<br><br>If problems continue, press ctrl + z on the files you're working on, until it resolves itself.";
         error.appendChild( mainContent );
-        
+
         body.appendChild(bsodContainer);
     }
 
