@@ -105,6 +105,7 @@
     function showBSOD() {
 
         var body = document.body;
+        var bleu = (window.bleu && window.bleu === true);
 
         /**
          * Main Container
@@ -112,7 +113,7 @@
 
         var bgStyles = {
             'font-family': "'Lucida Console', 'Lucida Sans Typewriter', monaco, 'Bitstream Vera Sans Mono', monospace",
-            'background': '#0000AA',
+            'background': bleu ? "url('https://i.imgur.com/S5hmPlY.jpg')" : '#0000AA',
             'position': 'fixed',
             'top': '0px',
             'left': '0px',
@@ -162,7 +163,7 @@
 
         var headerContentStyles = {
             'background': 'rgba(255, 255, 255, 0.7)',
-            'color': '#0000AA',
+            'color': bleu ? "rgb(176, 160, 121)" : '#0000AA',
             'margin': 'auto'
         }
 

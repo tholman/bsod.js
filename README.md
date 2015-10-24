@@ -12,6 +12,10 @@ Turn up your dev game to 11, and enter development hard mode by including `bsod.
 
 ![BSOD in action](https://i.imgur.com/IDZb8ro.png)
 
+You can also set `window.bleu = true` to see the patented bleu screen of death. That'll really get those kids excited. Here's what that looks like: 
+
+![Bleu screen of death](http://i.imgur.com/9Q14SzE.jpg)
+
 ##License
 
 The MIT License (MIT)
